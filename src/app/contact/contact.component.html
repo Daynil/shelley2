@@ -1,0 +1,80 @@
+<div [class.page-transition]="transitionService.isTransitioning()">
+  <div class="container">
+
+    <h2 class="text-center">Locations</h2>
+    <div class="row locations">
+      <div (click)="open('arlington')" class="col-md-3 col-md-offset-1 col-xs-12 card">
+        <p>415 West Golf Rd</p>
+        <p>Suite 47</p>
+        <p>Arlington Heights, IL 60005</p>  
+      </div>
+      <div (click)="open('crystallake')" class="col-md-3 col-md-offset-1 col-xs-12 card middle">
+        <p>104 Minnie St</p>
+        <p>Crystal Lake, IL 60014</p>
+      </div>
+      <div (click)="open('oakbrook')" class="col-md-3 col-md-offset-1 col-xs-12 card">
+        <p>900 Jorie Blvd</p>
+        <p>Suite 36</p>
+        <p>Oak Brook, IL 60523</p>
+      </div>
+    </div>
+
+    <div class="row contact-text">
+      <div class="col-md-8 col-md-offset-2 col-xs-12 body-text">
+        <p>If you have any questions about services I provide or you would like to schedule a free consultation, you may contact me via this website. I will respond as soon as possible. I am the only person responding to inquiries, so please leave as much or as little information as you feel comfortable.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 col-xs-12" id="contact-form">
+
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label class="control-label" for="nameFirst">First Name</label>
+              <input #nameFirst type="text" class="form-control" id="nameFirst" required>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label class="control-label" for="nameLast">Last Name</label>
+              <input #nameLast type="text" class="form-control" id="nameLast" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+              <label class="control-label" for="email">Email</label>
+              <input #email type="text" class="form-control" id="email" required>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <label class="control-label" for="subject">Subject</label>
+            <select #subject class="form-control" id="subject">
+              <option>Question/Information</option>
+              <option>Request appointment</option>
+              <option>Free First Consultation</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label class="control-label" for="comment">Body</label>
+              <textarea #body type="text" class="form-control" 
+                        id="comment" rows="4" required></textarea>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary"
+                (click)="mail(nameFirst, nameLast, email, subject, body)">Submit</button>
+
+      </div>
+    </div>
+  </div>
+  <toast #toast></toast>
+</div>

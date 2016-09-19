@@ -1,0 +1,52 @@
+@import './shared/common-styles';
+
+.page-wrapper {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/** Navbar */
+
+#nav {
+  z-index: 1;
+  border-bottom: 0px solid transparent;
+  transition: all 0.5s ease;
+  .nav-links {
+    margin-top: 10px;
+    .active-tab {
+      border: 2px solid $white-light;
+    }
+    a {
+      margin-left: 5px;
+      margin-right: 5px;
+      border: 2px solid transparent;
+      padding: 8px 12px;
+    }
+    a:hover {
+      border: 2px solid $white-light;
+    }
+    a:active, a:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
+
+#logo {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  position: relative;
+  bottom: 12px;
+  left: 5px;
+}
+
+#logo-text {
+  position: relative;
+  bottom: 6px;
+  left: 5px;
+}
