@@ -1,21 +1,13 @@
 <div [class.page-transition]="transitionService.isTransitioning()">
   <div class="container">
 
-    <h2 class="text-center">Locations</h2>
+    <h2 class="text-center">Location</h2>
     <div class="row locations">
-      <div (click)="open('arlington')" class="col-md-3 col-md-offset-1 col-xs-12 card">
-        <p>415 West Golf Rd</p>
-        <p>Suite 47</p>
-        <p>Arlington Heights, IL 60005</p>  
-      </div>
-      <div (click)="open('crystallake')" class="col-md-3 col-md-offset-1 col-xs-12 card middle">
-        <p>104 Minnie St</p>
-        <p>Crystal Lake, IL 60014</p>
-      </div>
-      <div (click)="open('oakbrook')" class="col-md-3 col-md-offset-1 col-xs-12 card">
-        <p>900 Jorie Blvd</p>
-        <p>Suite 36</p>
-        <p>Oak Brook, IL 60523</p>
+      <div (click)="open('oakbrook')" class="col-md-4 col-md-offset-4 col-xs-12 card">
+          <p>900 Jorie Blvd</p>
+          <p>Suite 36</p>
+          <p>Oak Brook, IL 60523</p><br/>
+          <p id="view">View On Map</p>
       </div>
     </div>
 

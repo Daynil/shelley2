@@ -6,8 +6,12 @@
 }
 
 .card {
-  height: 100px;
   line-height: 12px;
+  padding-top: 20px;
+}
+
+#view {
+  color: $brand-primary;
 }
 
 .middle {
