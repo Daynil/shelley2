@@ -8,6 +8,7 @@ const compress = require('compression');
 const app = express();
 
 let port = process.env.PORT || 3000;
+let verboseLogging = false;
 
 app.use(morgan('dev', {
   skip: (req, res) => {
@@ -19,7 +20,6 @@ app.use(morgan('dev', {
 app.use(compress());
 app.use( express.static( path.join(__dirname, './dist') ));
 app.use('/scripts', express.static( path.join(__dirname, './node_modules') ));
-app.use('/app', express.static( path.join(__dirname, './dist/app') ));
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './dist', 'index.html'));
