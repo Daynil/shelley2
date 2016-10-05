@@ -3,10 +3,13 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import "rxjs/add/operator/toPromise";
 
+import { environment } from '../../environments/environment';
 import { handleError, parseJson, packageForPost } from './http-helpers';
 
 @Injectable()
 export class MailService {
+
+  baseUrl = environment.production ? '' : 'http://localhost:3000';
 
   constructor(private http: Http) { }
 
@@ -21,7 +24,7 @@ export class MailService {
     };
     let pkg = packageForPost(mail);
     return this.http
-              .post('/email', pkg.body, pkg.opts)
+              .post(this.baseUrl + '/email', pkg.body, pkg.opts)
               .toPromise()
               .then(parseJson)
               .catch(handleError);
