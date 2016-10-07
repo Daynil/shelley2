@@ -14,7 +14,6 @@ export class MailService {
   constructor(private http: Http) { }
 
   sendEmail(first: string, last: string, email: string, subject: string, body: string) {
-    if (subject === '') subject = 'Footer contact';
     let mail = {
       first: first,
       last: last,

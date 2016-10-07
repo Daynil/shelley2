@@ -40,8 +40,8 @@ app.post('/email', (req, res) => {
   let mailgun = new Mailgun({apiKey: mailgun_api, domain: domain});
 
   let mail = {
-    from: our_email,
-    to: mailData.email,
+    from: mailData.email,
+    to: our_email,
     subject: `Counseling website email - ${mailData.subject}`,
     html: `
       <div><b>Name:</b> ${mailData.first} ${mailData.last}</div>

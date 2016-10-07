@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     let firstTxt = nameFirst.value;
     let lastTxt = nameLast.value;
     let emailTxt = email.value;
-    let subjectTxt = '';
+    let subjectTxt = 'Footer contact';
     let bodyTxt = body.value;
     let vals = [firstTxt, lastTxt, emailTxt, bodyTxt];
     let canSubmit = true;
