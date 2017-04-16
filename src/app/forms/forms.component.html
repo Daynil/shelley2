@@ -1,1 +1,16 @@
-
+<div [class.page-transition]="transitionService.isTransitioning()">
+  <div class="container">
+    <h1 class="text-center">Forms</h1>
+    <div class="col-md-8 col-md-offset-2 col-xs-12 body-text">
+      Please download, fill out, and bring these forms to your first visit.
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <i class="fa fa-file-text" aria-hidden="true" (click)="download('hipaa')">
+        <span>HIPAA and Client's Rights</span>
+      </i>
+      <i class="fa fa-file-text" aria-hidden="true" (click)="download('consent')">
+        <span>Informed Consent</span>
+      </i>
+    </div>
+  </div>
+</div>
