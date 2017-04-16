@@ -63,6 +63,17 @@ app.post('/email', (req, res) => {
 
 });
 
+app.post('/downloadDoc', (req, res) => {
+  let docName = req.body.docName;
+  res.download('./files/' + docName + '.pdf', docName, function(err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('dl went well');
+    }
+  });
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './dist', 'index.html'));
 });

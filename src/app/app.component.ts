@@ -19,8 +19,8 @@ export class AppComponent implements OnInit {
     this.copydate = new Date().getFullYear() + '';
   }
 
-  getActiveTab() {
-    
+  open(location: string) {
+    window.open('https://spiercounseling.wordpress.com/');
   }
 
   mail(nameFirst: HTMLInputElement, nameLast: HTMLInputElement, email: HTMLInputElement, body: HTMLTextAreaElement) {

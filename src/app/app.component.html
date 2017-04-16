@@ -31,7 +31,7 @@
                 </li>
                 <li><a routerLinkActive="active-tab" [routerLink]="['/other-services']">Other Services</a></li>
                 <li><a routerLinkActive="active-tab" [routerLink]="['/forms']">Forms</a></li>
-                <li><a routerLinkActive="active-tab" [routerLink]="['/blog']">Blog</a></li>
+                <li><a routerLinkActive="active-tab" (click)="open('blog')" id="blog-link">Blog</a></li>
                 <li><a routerLinkActive="active-tab" [routerLink]="['/contact']">Contact</a></li>
               </ul>
             </div>

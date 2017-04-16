@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, ResponseContentType, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/toPromise';
 
@@ -30,12 +30,16 @@ export class MailService {
   }
 
   downloadDoc(docName: string) {
-    let pkg = packageForPost({docName: docName});
+    let pkg = {docName: docName};
+    let opts = new RequestOptions({
+      responseType: ResponseContentType.ArrayBuffer
+    });
     return this.http
-              .post(this.baseUrl + '/downloadDoc', pkg.body, pkg.opts)
+              .post(this.baseUrl + '/downloadDoc', pkg, opts)
               .toPromise()
               .then((res: any) => {
-                let blob = new Blob([res._body], {type: 'application/msword'});
+                let blob = new Blob([res._body], {type: 'application/pdf'});
+                console.log(blob);
                 return blob;
               })
               .catch(handleError);
