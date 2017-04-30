@@ -8,6 +8,9 @@
 /node_modules
 /bower_components
 
+# files
+/files
+
 # IDEs and editors
 /.idea
 .project
