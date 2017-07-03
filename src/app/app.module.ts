@@ -16,6 +16,7 @@ import { BlogComponent } from './blog/blog.component';
 import { AnimalComponent } from './specialities/animal/animal.component';
 import { ArtComponent } from './specialities/art/art.component';
 import { GriefComponent } from './specialities/grief/grief.component';
+import { LgbtqiComponent } from './specialities/lgbtqi/lgbtqi.component';
 import { MindfulnessComponent } from './specialities/mindfulness/mindfulness.component';
 import { OtherIssuesComponent } from './specialities/other-issues/other-issues.component';
 import { SandtrayComponent } from './specialities/sandtray/sandtray.component';
@@ -29,7 +30,8 @@ import { ToastComponent } from './shared/toast.component';
   declarations: [ AppComponent, HomeComponent, AboutMeComponent, FormsComponent,
                   OtherServicesComponent, ContactComponent, AnimalComponent, ArtComponent,
                   GriefComponent, MindfulnessComponent, OtherIssuesComponent, SandtrayComponent,
-                  TraumaComponent, CassieComponent, BlogComponent, ToastComponent ],
+                  TraumaComponent, CassieComponent, BlogComponent, ToastComponent,
+                  LgbtqiComponent ],
   providers:    [ appRoutingProviders, TransitionService, MailService ],
   imports:      [ BrowserModule, HttpModule, routing ],
   bootstrap:    [ AppComponent ]

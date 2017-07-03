@@ -12,6 +12,7 @@ import { BlogComponent } from './blog/blog.component';
 import { AnimalComponent } from './specialities/animal/animal.component';
 import { ArtComponent } from './specialities/art/art.component';
 import { GriefComponent } from './specialities/grief/grief.component';
+import { LgbtqiComponent } from './specialities/lgbtqi/lgbtqi.component';
 import { MindfulnessComponent } from './specialities/mindfulness/mindfulness.component';
 import { OtherIssuesComponent } from './specialities/other-issues/other-issues.component';
 import { SandtrayComponent } from './specialities/sandtray/sandtray.component';
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   { path: 'animal-assisted-therapy', component: AnimalComponent },
   { path: 'art-therapy',             component: ArtComponent },
   { path: 'grief',                   component: GriefComponent },
+  { path: 'lgbtqi',                  component: LgbtqiComponent },
   { path: 'mindfulness',             component: MindfulnessComponent },
   { path: 'other-issues',            component: OtherIssuesComponent },
   { path: 'sandtray-therapy',        component: SandtrayComponent },
