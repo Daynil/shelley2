@@ -11,7 +11,7 @@ export class AboutMeComponent implements OnInit {
   languages = [];
   frameworks = [];
 
-  constructor(private transitionService: TransitionService) { }
+  constructor(public transitionService: TransitionService) { }
 
   ngOnInit() {
     this.transitionService.transition();

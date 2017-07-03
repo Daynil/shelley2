@@ -12,7 +12,7 @@ import { MailService } from '../shared/mail.service';
 })
 export class FormsComponent implements OnInit {
 
-  constructor(private transitionService: TransitionService,
+  constructor(public transitionService: TransitionService,
               private mailService: MailService) { }
 
   ngOnInit() {

@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
 
   @ViewChild('toast') toast: ToastComponent;
 
-  constructor(private transitionService: TransitionService,
+  constructor(public transitionService: TransitionService,
               private mailService: MailService) { }
 
   ngOnInit() {

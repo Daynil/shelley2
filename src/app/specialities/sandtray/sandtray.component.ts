@@ -9,7 +9,7 @@ import { TransitionService } from '../../shared/transition.service';
 })
 export class SandtrayComponent implements OnInit {
 
-  constructor(private transitionService: TransitionService) { }
+  constructor(public transitionService: TransitionService) { }
 
   ngOnInit() {
     this.transitionService.transition();
