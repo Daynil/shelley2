@@ -1,111 +1,132 @@
 <div class="page-wrapper">
-    
-    <!---- Home ---->
-    <div id="home-link">
 
-        <nav id="nav" class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            <a class="navbar-brand" [routerLink]="['/']">
-                <img id="logo" src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1470260927/logogood_wsyt4q.png">
-                <span id="logo-text">Shelley Pier, MSW, LCSW</span>
-            </a>
-            </div>
+  <!---- Home ---->
+  <div id="home-link">
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-              <ul class="nav navbar-nav navbar-right nav-links">
-                <li><a routerLinkActive="active-tab" [routerLink]="['/about-me']">About Me</a></li>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Specialities<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a [routerLink]="['/trauma']">Trauma/PTSD</a></li>
-                    <li><a [routerLink]="['/grief']">Grief</a></li>
-                    <li><a [routerLink]="['/lgbtqi']">LGBTQI</a></li>
-                    <li><a [routerLink]="['/animal-assisted-therapy']">Animal Assisted Therapy</a></li>
-                  </ul>
+    <nav id="nav" class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" [routerLink]="['/']">
+            <img id="logo" src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1470260927/logogood_wsyt4q.png">
+            <span id="logo-text">Shelley Pier, MSW, LCSW</span>
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-right nav-links">
+            <li>
+              <a routerLinkActive="active-tab" [routerLink]="['/about-me']">About Me</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Specialities
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a [routerLink]="['/trauma']">Trauma/PTSD</a>
                 </li>
-                <li><a routerLinkActive="active-tab" [routerLink]="['/other-services']">Other Services</a></li>
-                <li><a routerLinkActive="active-tab" [routerLink]="['/forms']">Forms</a></li>
-                <li><a routerLinkActive="active-tab" (click)="open('blog')" id="blog-link">Blog</a></li>
-                <li><a routerLinkActive="active-tab" [routerLink]="['/contact']">Contact</a></li>
+                <li>
+                  <a [routerLink]="['/grief']">Grief</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/lgbtqi']">LGBTQIAP</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/emdr']">EMDR</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/animal-assisted-therapy']">Animal Assisted Therapy</a>
+                </li>
               </ul>
+            </li>
+            <li>
+              <a routerLinkActive="active-tab" [routerLink]="['/other-services']">Other Services</a>
+            </li>
+            <li>
+              <a routerLinkActive="active-tab" [routerLink]="['/forms']">Forms</a>
+            </li>
+            <li>
+              <a routerLinkActive="active-tab" (click)="open('blog')" id="blog-link">Blog</a>
+            </li>
+            <li>
+              <a routerLinkActive="active-tab" [routerLink]="['/contact']">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <router-outlet></router-outlet>
+
+  </div>
+
+  <!---- Contact ---->
+  <div id="contact-link">
+    <div class="container">
+      <div class="row">
+        <h4 id="contact-text">Want to contact me?</h4>
+
+        <div class="col-md-6 col-xs-12" id="contact-info">
+          <div>Shelley Pier, MSW, LCSW</div>
+          <div class="divider"></div>
+          <div>900 Jorie Blvd, Suite 36</div>
+          <div>Oak Brook, IL 60523</div>
+          <div class="divider"></div>
+          <div>P: 847-440-4251</div>
+          <div>E: spiercounseling@gmail.com</div>
+        </div>
+
+        <div class="col-md-6 col-xs-12" id="contact-form">
+
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="nameFirst">First Name</label>
+                <input #nameFirst type="text" class="form-control" id="nameFirst" required>
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="nameLast">Last Name</label>
+                <input #nameLast type="text" class="form-control" id="nameLast" required>
+              </div>
             </div>
           </div>
-        </nav>
-        <router-outlet></router-outlet>
 
-    </div>
-
-    <!---- Contact ---->
-    <div id="contact-link">
-      <div class="container">
-        <div class="row">
-          <h4 id="contact-text">Want to contact me?</h4>
-
-          <div class="col-md-6 col-xs-12" id="contact-info">
-            <div>Shelley Pier, MSW, LCSW</div>
-            <div class="divider"></div>
-            <div>900 Jorie Blvd, Suite 36</div>
-            <div>Oak Brook, IL 60523</div>
-            <div class="divider"></div>
-            <div>P: 847-440-4251</div>
-            <div>E: spiercounseling@gmail.com</div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="email">Email</label>
+                <input #email type="text" class="form-control" id="email" required>
+              </div>
+            </div>
           </div>
 
-          <div class="col-md-6 col-xs-12" id="contact-form">
-
-            <div class="row">
-              <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                  <label class="control-label" for="nameFirst">First Name</label>
-                  <input #nameFirst type="text" class="form-control" id="nameFirst" required>
-                </div>
-              </div>
-              <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                  <label class="control-label" for="nameLast">Last Name</label>
-                  <input #nameLast type="text" class="form-control" id="nameLast" required>
-                </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="comment">Comment</label>
+                <textarea #comment type="text" class="form-control" id="comment" rows="4" required></textarea>
               </div>
             </div>
-
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="form-group">
-                  <label class="control-label" for="email">Email</label>
-                  <input #email type="text" class="form-control" id="email" required>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="form-group">
-                  <label class="control-label" for="comment">Comment</label>
-                  <textarea #comment type="text" class="form-control" 
-                            id="comment" rows="4" required></textarea>
-                </div>
-              </div>
-            </div>
-            <button class="btn btn-primary" 
-                    (click)="mail(nameFirst, nameLast, email, comment)">Submit</button>
-
           </div>
-          
+          <button class="btn btn-primary" (click)="mail(nameFirst, nameLast, email, comment)">Submit</button>
+
         </div>
 
       </div>
 
-        <div id="copy">
-            <p>© Shelley Pier {{ copydate }}. All rights reserved.</p>
-        </div>
-        
     </div>
-    <toast #toast></toast>
+
+    <div id="copy">
+      <p>© Shelley Pier {{ copydate }}. All rights reserved.</p>
+    </div>
+
+  </div>
+  <toast #toast></toast>
 </div>

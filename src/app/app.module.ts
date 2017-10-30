@@ -25,13 +25,15 @@ import { TraumaComponent } from './specialities/trauma/trauma.component';
 import { MailService } from './shared/mail.service';
 import { TransitionService } from './shared/transition.service';
 import { ToastComponent } from './shared/toast.component';
+import { EmdrComponent } from './specialities/emdr/emdr.component';
 
 @NgModule({
   declarations: [ AppComponent, HomeComponent, AboutMeComponent, FormsComponent,
                   OtherServicesComponent, ContactComponent, AnimalComponent, ArtComponent,
                   GriefComponent, MindfulnessComponent, OtherIssuesComponent, SandtrayComponent,
                   TraumaComponent, CassieComponent, BlogComponent, ToastComponent,
-                  LgbtqiComponent ],
+                  LgbtqiComponent,
+                  EmdrComponent ],
   providers:    [ appRoutingProviders, TransitionService, MailService ],
   imports:      [ BrowserModule, HttpModule, routing ],
   bootstrap:    [ AppComponent ]
